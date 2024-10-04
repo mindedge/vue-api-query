@@ -1,5 +1,5 @@
 {
-  "name": "vue-api-query",
+  "name": "@mindedge/vue-api-query",
   "version": "0.0.0-development",
   "description": "💎 Elegant and simple way to build requests for REST API",
   "main": "build/index.js",
@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "@types/qs": "^6.9.7",
-    "defu": "^6.0.0",
+    "defu": "6.1.2",
     "dotprop": "^1.2.0",
     "dset": "^3.1.2",
     "object-to-formdata": "^4.1.0",
