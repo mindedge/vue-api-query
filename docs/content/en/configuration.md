@@ -11,7 +11,7 @@ See the [API reference](/api/model-options) for a list of available options.
 
 The first step is to create a base model to define the default options, in order to abstract configuration
 from your models. It should extend the
-[Base Model](https://github.com/robsontenorio/vue-api-query/blob/master/src/Model.js) of [vue-api-query](https://github.com/robsontenorio/vue-api-query).
+[Base Model](https://github.com/mindedge/vue-api-query/blob/master/src/Model.js) of [vue-api-query](https://github.com/mindedge/vue-api-query).
 
 The base model must implement two methods:
 

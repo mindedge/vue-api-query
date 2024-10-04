@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robsontenorio/vue-api-query.git"
+    "url": "git+https://github.com/mindedge/vue-api-query.git"
   },
   "keywords": [
     "vue",
@@ -42,9 +42,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robsontenorio/vue-api-query/issues"
+    "url": "https://github.com/mindedge/vue-api-query/issues"
   },
-  "homepage": "https://github.com/robsontenorio/vue-api-query#readme",
+  "homepage": "https://github.com/mindedge/vue-api-query#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
