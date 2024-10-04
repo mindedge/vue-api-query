@@ -369,6 +369,14 @@ export class Model extends StaticModel {
   primaryKey (): string
 
   /**
+   * The "data" wrapper that should be checked when retrieving models
+   *
+   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#wrap|API Reference}
+   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#changing-the-wrapper|Configuration}
+   */
+  wrap (): string
+
+  /**
    * This method can be used to lazy load relationships of a model and apply model instances to them.
    *
    * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#hasmany|API Reference}
