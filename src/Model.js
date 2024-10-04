@@ -57,12 +57,12 @@ export default class Model extends StaticModel {
   }
 
   /**
-   * The "data" wrapper that should be applied.
+   * The "data" wrapper that should be checked when retrieving models
    *
    * @return {string|null}
    */
   wrap() {
-    return ''
+    return null
   }
 
   /**
