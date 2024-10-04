@@ -38,7 +38,7 @@ export interface HTTPResponse<T> {
 export type HTTPPromise<T = any> = Promise<HTTPResponse<T>>
 
 export interface WrappedResponse<T> {
-  data: T,
+  data: T
   [key: string]: any
 }
 
@@ -48,7 +48,7 @@ declare class StaticModel {
   /**
    * Create an instance of itself.
    */
-  static instance<M extends typeof Model> (this: M): InstanceType<M>
+  static instance<M extends typeof Model>(this: M): InstanceType<M>
 
   /**
    * Query
@@ -57,96 +57,126 @@ declare class StaticModel {
   /**
    * Configuration of HTTP Instance.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#config|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#configuring-the-request|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#config|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#configuring-the-request|Building the Query}
    */
-  static config<M extends typeof Model> (this: M, config: HTTPRequestConfig): InstanceType<M>
+  static config<M extends typeof Model>(
+    this: M,
+    config: HTTPRequestConfig
+  ): InstanceType<M>
 
   /**
    * Eager load relationships.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  static include<M extends typeof Model> (this: M, ...relationships: string[]): InstanceType<M>
+  static include<M extends typeof Model>(
+    this: M,
+    ...relationships: string[]
+  ): InstanceType<M>
 
   /**
    * Eager load relationships.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  static include<M extends typeof Model> (this: M, relationships: string[]): InstanceType<M>
+  static include<M extends typeof Model>(
+    this: M,
+    relationships: string[]
+  ): InstanceType<M>
 
   /**
    * Eager load relationships.
    *
    * Alias for the [include()]{@link include} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  static with<M extends typeof Model> (this: M, ...relationships: string[]): InstanceType<M>
+  static with<M extends typeof Model>(
+    this: M,
+    ...relationships: string[]
+  ): InstanceType<M>
 
   /**
    * Eager load relationships.
    *
    * Alias for the [include()]{@link include} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  static with<M extends typeof Model> (this: M, relationships: string[]): InstanceType<M>
+  static with<M extends typeof Model>(
+    this: M,
+    relationships: string[]
+  ): InstanceType<M>
 
   /**
    * Append attributes.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
    */
-  static append<M extends typeof Model> (this: M, ...attributes: string[]): InstanceType<M>
+  static append<M extends typeof Model>(
+    this: M,
+    ...attributes: string[]
+  ): InstanceType<M>
 
   /**
    * Append attributes.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
    */
-  static append<M extends typeof Model> (this: M, attributes: string[]): InstanceType<M>
+  static append<M extends typeof Model>(
+    this: M,
+    attributes: string[]
+  ): InstanceType<M>
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  static select<M extends typeof Model> (this: M, ...columns: string[]): InstanceType<M>
+  static select<M extends typeof Model>(
+    this: M,
+    ...columns: string[]
+  ): InstanceType<M>
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  static select<M extends typeof Model> (this: M, columns: string[]): InstanceType<M>
+  static select<M extends typeof Model>(
+    this: M,
+    columns: string[]
+  ): InstanceType<M>
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  static select<M extends typeof Model> (this: M, columns: {
-    [related: string]: string[]
-  }): InstanceType<M>
+  static select<M extends typeof Model>(
+    this: M,
+    columns: {
+      [related: string]: string[]
+    }
+  ): InstanceType<M>
 
   /**
    * Add a basic where clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
    */
-  static where<M extends typeof Model> (
+  static where<M extends typeof Model>(
     this: M,
     field: string | string[],
     value: string | number | boolean
@@ -155,10 +185,10 @@ declare class StaticModel {
   /**
    * Add a basic where clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
    */
-  static where<M extends typeof Model> (
+  static where<M extends typeof Model>(
     this: M,
     filter: Record<string, any>
   ): InstanceType<M>
@@ -166,10 +196,10 @@ declare class StaticModel {
   /**
    * Add a "where in" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
    */
-  static whereIn<M extends typeof Model> (
+  static whereIn<M extends typeof Model>(
     this: M,
     field: string | string[],
     values: (string | number | boolean)[]
@@ -178,10 +208,10 @@ declare class StaticModel {
   /**
    * Add a "where in" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
    */
-  static whereIn<M extends typeof Model> (
+  static whereIn<M extends typeof Model>(
     this: M,
     filter: Record<string, any>
   ): InstanceType<M>
@@ -189,58 +219,74 @@ declare class StaticModel {
   /**
    * Add an "order by" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#sorting|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#sorting|Building the Query}
    */
-  static orderBy<M extends typeof Model> (this: M, ...columns: string[]): InstanceType<M>
+  static orderBy<M extends typeof Model>(
+    this: M,
+    ...columns: string[]
+  ): InstanceType<M>
 
   /**
    * Add an "order by" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#sorting|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#sorting|Building the Query}
    */
-  static orderBy<M extends typeof Model> (this: M, columns: string[]): InstanceType<M>
+  static orderBy<M extends typeof Model>(
+    this: M,
+    columns: string[]
+  ): InstanceType<M>
 
   /**
    * Set the current page.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#page|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#paginating|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#page|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#paginating|Building the Query}
    */
-  static page<M extends typeof Model> (this: M, number: number): InstanceType<M>
+  static page<M extends typeof Model>(this: M, number: number): InstanceType<M>
 
   /**
    * Set the page limit.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#limit|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#paginating|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#limit|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#paginating|Building the Query}
    */
-  static limit<M extends typeof Model> (this: M, number: number): InstanceType<M>
+  static limit<M extends typeof Model>(this: M, number: number): InstanceType<M>
 
   /**
    * Add custom parameters to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#params|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#applying-custom-parameters|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#params|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#applying-custom-parameters|Building the Query}
    */
-  static params<M extends typeof Model> (this: M, payload: Record<string, string | number | boolean>): InstanceType<M>
+  static params<M extends typeof Model>(
+    this: M,
+    payload: Record<string, string | number | boolean>
+  ): InstanceType<M>
 
   /**
    * Add a conditional clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#when|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#conditional|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#when|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#conditional|Building the Query}
    */
-  static when<M extends typeof Model, T = any> (this: M, value: T, callback: (query: Builder, value: T) => any): InstanceType<M>
+  static when<M extends typeof Model, T = any>(
+    this: M,
+    value: T,
+    callback: (query: Builder, value: T) => any
+  ): InstanceType<M>
 
   /**
    * Build custom endpoints.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#custom|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#calling-a-custom-resource|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#custom|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#calling-a-custom-resource|Building the Query}
    */
-  static custom<M extends typeof Model> (this: M, ...endpoint: (Model | string)[]): InstanceType<M>
+  static custom<M extends typeof Model>(
+    this: M,
+    ...endpoint: (Model | string)[]
+  ): InstanceType<M>
 
   /**
    * Results
@@ -249,82 +295,88 @@ declare class StaticModel {
   /**
    * Execute the query and get the first result.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#first|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#first|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
    */
-  static first<M extends typeof Model> (this: M): QueryPromise<InstanceType<M>>
+  static first<M extends typeof Model>(this: M): QueryPromise<InstanceType<M>>
 
   /**
    * Execute the query and get the first result.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#first-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#first-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
    */
-  static $first<M extends typeof Model> (this: M): Promise<InstanceType<M>>
+  static $first<M extends typeof Model>(this: M): Promise<InstanceType<M>>
 
   /**
    * Find a model by its primary key.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#find|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#find|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
    */
-  static find<M extends typeof Model> (this: M, id: number | string): QueryPromise<InstanceType<M>>
+  static find<M extends typeof Model>(
+    this: M,
+    id: number | string
+  ): QueryPromise<InstanceType<M>>
 
   /**
    * Find a model by its primary key.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#find-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#find-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
    */
-  static $find<M extends typeof Model> (this: M, id: number | string): Promise<InstanceType<M>>
+  static $find<M extends typeof Model>(
+    this: M,
+    id: number | string
+  ): Promise<InstanceType<M>>
 
   /**
    * Execute the query and get all results.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  static get<M extends typeof Model> (this: M): QueryPromise<InstanceType<M>[]>
+  static get<M extends typeof Model>(this: M): QueryPromise<InstanceType<M>[]>
 
   /**
    * Execute the query and get all results.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  static $get<M extends typeof Model> (this: M): Promise<InstanceType<M>[]>
+  static $get<M extends typeof Model>(this: M): Promise<InstanceType<M>[]>
 
   /**
    * Execute the query and get all results.
    *
    * Alias for the [get()]{@link get} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  static all<M extends typeof Model> (this: M): QueryPromise<InstanceType<M>[]>
+  static all<M extends typeof Model>(this: M): QueryPromise<InstanceType<M>[]>
 
   /**
    * Execute the query and get all results.
    *
    * Alias for the [$get()]{@link $get} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  static $all<M extends typeof Model> (this: M): Promise<InstanceType<M>[]>
+  static $all<M extends typeof Model>(this: M): Promise<InstanceType<M>[]>
 }
 
 export class Model extends StaticModel {
   /**
    * Instance of the HTTP client which is used to make requests.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#http|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/installation|Installation}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#http|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/installation|Installation}
    */
   static $http: any
 
-  constructor (...args: any[])
+  constructor(...args: any[])
 
   /**
    * Settings
@@ -333,85 +385,85 @@ export class Model extends StaticModel {
   /**
    * Instance of the HTTP client which is used to make requests.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#http|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/installation|Installation}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#http|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/installation|Installation}
    */
-  get $http (): any
+  get $http(): any
 
   /**
    * This method can be overridden in the model to configure
    * [object-to-formdata]{@link https://github.com/therealparmesh/object-to-formdata#usage|object-to-formdata}.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#http|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#http|API Reference}
    * @see {@link https://github.com/therealparmesh/object-to-formdata#usage|object-to-formdata}
    */
-  formData (): {
-    indices: boolean,
-    nullsAsUndefineds: boolean,
-    booleansAsIntegers: boolean,
-    allowEmptyArrays: boolean,
+  formData(): {
+    indices: boolean
+    nullsAsUndefineds: boolean
+    booleansAsIntegers: boolean
+    allowEmptyArrays: boolean
   }
 
   /**
    * Resource route of the model which is used to build the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#resource|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#creating-the-domain-models|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#resource|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#creating-the-domain-models|Configuration}
    */
-  resource (): string
+  resource(): string
 
   /**
    * Primary key of the model which is used to build the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#primarykey|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#changing-the-primary-key|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#primarykey|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#changing-the-primary-key|Configuration}
    */
-  primaryKey (): string
+  primaryKey(): string
 
   /**
    * The "data" wrapper that should be checked when retrieving models
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#wrap|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#changing-the-wrapper|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#wrap|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#changing-the-wrapper|Configuration}
    */
-  wrap (): string
+  wrap(): string
 
   /**
    * This method can be used to lazy load relationships of a model and apply model instances to them.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#hasmany|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#lazy-loading-relationships|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#hasmany|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#lazy-loading-relationships|Configuration}
    */
-  hasMany<T extends typeof Model> (model: T): InstanceType<T>
+  hasMany<T extends typeof Model>(model: T): InstanceType<T>
 
   /**
    * This method can be implemented in the model to apply model instances to eager loaded relationships.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#relations|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#eager-loaded-relationships|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#relations|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#eager-loaded-relationships|Configuration}
    */
-  relations (): Record<string, typeof Model>
+  relations(): Record<string, typeof Model>
 
   /**
    * Base URL which is used and prepended to make requests.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#baseurl|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#creating-a-base-model|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#baseurl|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#creating-a-base-model|Configuration}
    */
-  baseURL (): string
+  baseURL(): string
 
   /**
    * Request method which is used to make requests.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#request|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#creating-a-base-model|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#request|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#creating-a-base-model|Configuration}
    */
-  request (config: HTTPRequestConfig): HTTPPromise
+  request(config: HTTPRequestConfig): HTTPPromise
 
   /**
    * From resource.
    */
-  private _from (url: string): void
+  private _from(url: string): void
 
   /**
    * Helpers
@@ -420,43 +472,43 @@ export class Model extends StaticModel {
   /**
    * Get the primary key of the model.
    */
-  private getPrimaryKey (): string | number
+  private getPrimaryKey(): string | number
 
   /**
    * Determines whether the model has an ID.
    */
-  private hasId (): boolean
+  private hasId(): boolean
 
   /**
    * Determines whether the ID is valid.
    */
-  private isValidId (id: string | number): boolean
+  private isValidId(id: string | number): boolean
 
   /**
    * The model's endpoint.
    */
-  private endpoint (): string
+  private endpoint(): string
 
   /**
    * This method can be overridden in the model to customize the name of the query parameters.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#parameternames|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/configuration#customizing-query-parameters|Configuration}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#parameternames|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/configuration#customizing-query-parameters|Configuration}
    */
-  protected parameterNames (): {
-    include: string,
-    filter: string,
-    sort: string,
-    fields: string,
-    append: string,
-    page: string,
+  protected parameterNames(): {
+    include: string
+    filter: string
+    sort: string
+    fields: string
+    append: string
+    page: string
     limit: string
   }
 
   /**
    * This method can be overridden in the model to configure `qs`.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/model-options#stringifyOptions|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/model-options#stringifyOptions|API Reference}
    * @see {@link https://github.com/ljharb/qs#stringifying|qs}
    */
   protected stringifyOptions(): IStringifyOptions
@@ -468,176 +520,174 @@ export class Model extends StaticModel {
   /**
    * Configuration of HTTP Instance.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#config|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#configuring-the-request|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#config|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#configuring-the-request|Building the Query}
    */
-  config (config: HTTPRequestConfig): this
+  config(config: HTTPRequestConfig): this
 
   /**
    * Eager load relationships.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  include (...relationships: string[]): this
+  include(...relationships: string[]): this
 
   /**
    * Eager load relationships.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  include (relationships: string[]): this
-
-  /**
-   * Eager load relationships.
-   *
-   * Alias for the [include()]{@link include} method.
-   *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
-   */
-  with (...relationships: string[]): this
+  include(relationships: string[]): this
 
   /**
    * Eager load relationships.
    *
    * Alias for the [include()]{@link include} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  with (relationships: string[]): this
+  with(...relationships: string[]): this
+
+  /**
+   * Eager load relationships.
+   *
+   * Alias for the [include()]{@link include} method.
+   *
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   */
+  with(relationships: string[]): this
 
   /**
    * Append attributes.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
    */
-  append (...attributes: string[]): this
+  append(...attributes: string[]): this
 
   /**
    * Append attributes.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
    */
-  append (attributes: string[]): this
+  append(attributes: string[]): this
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  select (...columns: string[]): this
+  select(...columns: string[]): this
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  select (columns: string[]): this
+  select(columns: string[]): this
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  select (columns: {
-    [related: string]: string[]
-  }): this
+  select(columns: { [related: string]: string[] }): this
 
   /**
    * Add a basic where clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
    */
-  where (field: string | string[], value: string | number | boolean): this
+  where(field: string | string[], value: string | number | boolean): this
 
   /**
    * Add a basic where clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
    */
-  where (filter: Record<string, any>): this
+  where(filter: Record<string, any>): this
 
   /**
    * Add a "where in" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
    */
-  whereIn (field: string | string[], array: (string | number | boolean)[]): this
+  whereIn(field: string | string[], array: (string | number | boolean)[]): this
 
   /**
    * Add a "where in" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
    */
-  whereIn (filter: Record<string, any>): this
+  whereIn(filter: Record<string, any>): this
 
   /**
    * Add an "order by" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#sorting|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#sorting|Building the Query}
    */
-  orderBy (...columns: string[]): this
+  orderBy(...columns: string[]): this
 
   /**
    * Add an "order by" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#sorting|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#sorting|Building the Query}
    */
-  orderBy (columns: string[]): this
+  orderBy(columns: string[]): this
 
   /**
    * Set the current page.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#page|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#paginating|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#page|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#paginating|Building the Query}
    */
-  page (number: number): this
+  page(number: number): this
 
   /**
    * Set the page limit.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#limit|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#paginating|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#limit|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#paginating|Building the Query}
    */
-  limit (number: number): this
+  limit(number: number): this
 
   /**
    * Add custom parameters to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#params|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#applying-custom-parameters|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#params|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#applying-custom-parameters|Building the Query}
    */
-  params (payload: Record<string, string | number | boolean>): this
+  params(payload: Record<string, string | number | boolean>): this
 
   /**
    * Add a conditional clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#when|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#conditional|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#when|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#conditional|Building the Query}
    */
   when<T = any>(value: T, callback: (query: Builder, value: T) => any): this
 
   /**
    * Build custom endpoints.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#custom|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#calling-a-custom-resource|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#custom|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#calling-a-custom-resource|Building the Query}
    */
-  custom (...endpoint: (Model | string)[]): this
+  custom(...endpoint: (Model | string)[]): this
 
   /**
    * Results
@@ -646,70 +696,70 @@ export class Model extends StaticModel {
   /**
    * Execute the query and get the first result.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#first|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#first|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
    */
-  first (): QueryPromise<this>
+  first(): QueryPromise<this>
 
   /**
    * Execute the query and get the first result.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#first-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#first-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#getting-the-first-record|Building the Query}
    */
-  $first (): Promise<this>
+  $first(): Promise<this>
 
   /**
    * Find a model by its primary key.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#find|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#find|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
    */
-  find (identifier: number | string): QueryPromise<this>
+  find(identifier: number | string): QueryPromise<this>
 
   /**
    * Find a model by its primary key.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#find-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#find-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#finding-a-specific-record|Building the Query}
    */
-  $find (identifier: number | string): Promise<this>
+  $find(identifier: number | string): Promise<this>
 
   /**
    * Execute the query and get all results.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  get (): QueryPromise<this[]>
+  get(): QueryPromise<this[]>
 
   /**
    * Execute the query and get all results.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  $get (): Promise<this[]>
+  $get(): Promise<this[]>
 
   /**
    * Execute the query and get all results.
    *
    * Alias for the [get()]{@link get} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  all (): QueryPromise<this[]>
+  all(): QueryPromise<this[]>
 
   /**
    * Execute the query and get all results.
    *
    * Alias for the [$get()]{@link $get} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
-  $all (): Promise<this[]>
+  $all(): Promise<this[]>
 
   /**
    * Common CRUD operations
@@ -718,36 +768,36 @@ export class Model extends StaticModel {
   /**
    * Delete the model from the database.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/crud-operations#delete|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/performing-operations#deleting-a-model|Performing Operations}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/crud-operations#delete|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/performing-operations#deleting-a-model|Performing Operations}
    */
-  delete (): Promise<any>
+  delete(): Promise<any>
 
   /**
    * Save or update a model in the database, then return the instance.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/crud-operations#save|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/performing-operations#saving-a-model|Performing Operations}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/crud-operations#save|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/performing-operations#saving-a-model|Performing Operations}
    */
-  save (): Promise<this>
+  save(): Promise<this>
 
   /**
    * Save a model in the database, then return the instance.
    */
-  private _create (): Promise<this>
+  private _create(): Promise<this>
 
   /**
    * Update a model in the database, then return the instance.
    */
-  private _update (): Promise<this>
+  private _update(): Promise<this>
 
   /**
    * Make a `PATCH` request to update a model in the database, then return the instance.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/crud-operations#patch|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/performing-operations#saving-a-model|Performing Operations}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/crud-operations#patch|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/performing-operations#saving-a-model|Performing Operations}
    */
-  patch (): Promise<this>
+  patch(): Promise<this>
 
   /**
    * Relationship operations
@@ -756,26 +806,26 @@ export class Model extends StaticModel {
   /**
    * Create a new related model.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/relationship-operations#for|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/performing-operations#creating-related-models|Performing Operations}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/relationship-operations#for|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/performing-operations#creating-related-models|Performing Operations}
    */
-  for (...models: Model[]): this
+  for(...models: Model[]): this
 
   /**
    * Create a new related model.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/relationship-operations#attach|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/performing-operations#attaching-a-model|Performing Operations}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/relationship-operations#attach|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/performing-operations#attaching-a-model|Performing Operations}
    */
-  attach (params: Record<string, any>): Promise<any>
+  attach(params: Record<string, any>): Promise<any>
 
   /**
    * Update a related model.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/relationship-operations#sync|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/performing-operations#syncing-a-model|Performing Operations}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/relationship-operations#sync|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/performing-operations#syncing-a-model|Performing Operations}
    */
-  sync (params: Record<string, any>): Promise<any>
+  sync(params: Record<string, any>): Promise<any>
 }
 
 declare class Builder {
@@ -786,158 +836,156 @@ declare class Builder {
   /**
    * Eager load relationships.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  include (...relationships: string[]): this
+  include(...relationships: string[]): this
 
   /**
    * Eager load relationships.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  include (relationships: string[]): this
-
-  /**
-   * Eager load relationships.
-   *
-   * Alias for the [include()]{@link include} method.
-   *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
-   */
-  with (...relationships: string[]): this
+  include(relationships: string[]): this
 
   /**
    * Eager load relationships.
    *
    * Alias for the [include()]{@link include} method.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
    */
-  with (relationships: string[]): this
+  with(...relationships: string[]): this
+
+  /**
+   * Eager load relationships.
+   *
+   * Alias for the [include()]{@link include} method.
+   *
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#include|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#including-relationships|Building the Query}
+   */
+  with(relationships: string[]): this
 
   /**
    * Append attributes.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
    */
-  append (...attributes: string[]): this
+  append(...attributes: string[]): this
 
   /**
    * Append attributes.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#append|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#appending-attributes|Building the Query}
    */
-  append (attributes: string[]): this
+  append(attributes: string[]): this
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  select (...columns: string[]): this
+  select(...columns: string[]): this
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  select (columns: string[]): this
+  select(columns: string[]): this
 
   /**
    * Set the columns to be selected.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#select|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#selecting-fields|Building the Query}
    */
-  select (columns: {
-    [related: string]: string[]
-  }): this
+  select(columns: { [related: string]: string[] }): this
 
   /**
    * Add a basic where clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
    */
-  where (field: string | string[], value: string | number | boolean): this
+  where(field: string | string[], value: string | number | boolean): this
 
   /**
    * Add a basic where clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#where|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-a-single-value|Building the Query}
    */
-  where (filter: Record<string, any>): this
+  where(filter: Record<string, any>): this
 
   /**
    * Add a "where in" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
    */
-  whereIn (field: string | string[], array: (string | number | boolean)[]): this
+  whereIn(field: string | string[], array: (string | number | boolean)[]): this
 
   /**
    * Add a "where in" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#wherein|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#evaluating-multiple-values|Building the Query}
    */
-  whereIn (filter: Record<string, any>): this
+  whereIn(filter: Record<string, any>): this
 
   /**
    * Add an "order by" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#sorting|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#sorting|Building the Query}
    */
-  orderBy (...columns: string[]): this
+  orderBy(...columns: string[]): this
 
   /**
    * Add an "order by" clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#sorting|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#orderby|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#sorting|Building the Query}
    */
-  orderBy (columns: string[]): this
+  orderBy(columns: string[]): this
 
   /**
    * Set the current page.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#page|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#paginating|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#page|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#paginating|Building the Query}
    */
-  page (number: number): this
+  page(number: number): this
 
   /**
    * Set the page limit.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#limit|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#paginating|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#limit|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#paginating|Building the Query}
    */
-  limit (number: number): this
+  limit(number: number): this
 
   /**
    * Add custom parameters to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#params|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#applying-custom-parameters|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#params|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#applying-custom-parameters|Building the Query}
    */
-  params (payload: Record<string, string | number | boolean>): this
+  params(payload: Record<string, string | number | boolean>): this
 
   /**
    * Add a conditional clause to the query.
    *
-   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#when|API Reference}
-   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#conditional|Building the Query}
+   * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#when|API Reference}
+   * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#conditional|Building the Query}
    */
   when<T = any>(value: T, callback: (query: this, value: T) => any): this
 
