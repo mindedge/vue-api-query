@@ -174,7 +174,7 @@ export default class Post extends Model {
     return 'posts'
   }
 
-  // Define the primary key of the model
+  // Define the response wrapper
   wrap() {
     return 'data'
   }
