@@ -156,6 +156,8 @@ This **Post** model will build the query using the `slug` as primary key: `/post
 
 ## Changing the Wrapper
 
+<alert type="success">Available in version >= v1.12.0</alert>
+
 <alert type="info">By default, the `wrap` is set to `null`.</alert>
 
 See the [API reference](/api/model-options#wrap)

@@ -12,6 +12,8 @@ export default class Model extends StaticModel {
 
     if (attributes.length === 0) {
       this._builder = new Builder(this)
+      // Set the default data wrapper
+      this._wrapper = this.wrap()
     } else {
       Object.assign(this, ...attributes)
       this._applyRelations(this)
@@ -71,9 +73,8 @@ export default class Model extends StaticModel {
    * @return {object|array} The unwraped response
    */
   _unwrap(response) {
-    const wrapper = this.wrap()
-    if (wrapper) {
-      return response[wrapper] || response
+    if (this._wrapper) {
+      return response[this._wrapper] || response
     } else {
       return response
     }
@@ -282,6 +283,26 @@ export default class Model extends StaticModel {
   when(value, callback) {
     this._builder.when(value, callback)
 
+    return this
+  }
+
+  /**
+   * The "data" wrapper that will override the wrap() method
+   *
+   * @param {string} wrap The new wrapper for this one request
+   *
+   * @return {string|null}
+   */
+  wrappedBy(wrap) {
+    this._wrapper = wrap
+    return this
+  }
+
+  /**
+   * Disable wrapping for this one request
+   */
+  nowrap() {
+    this._wrapper = null
     return this
   }
 

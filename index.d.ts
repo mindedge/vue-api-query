@@ -926,6 +926,20 @@ declare class Builder {
   limit (number: number): this
 
   /**
+   * Change the `wrap()` data wrapper for this request.
+   *
+   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#wrappedBy|API Reference}
+   */
+  wrappedBy (attributes: string[]): this
+
+  /**
+   * Remove the `wrap()` data wrapper for this request to return the raw response.
+   *
+   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#nowrap|API Reference}
+   */
+  nowrap (attributes: string[]): this
+
+  /**
    * Add custom parameters to the query.
    *
    * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#params|API Reference}

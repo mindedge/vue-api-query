@@ -334,6 +334,34 @@ describe('Model methods', () => {
     })
   })
 
+  test('nowrap().get() returns the full response with the "data" wrapper even though the wrap method is set', async () => {
+    // Set the wrap method to 'data'
+    Post.prototype['wrap'] = () => {
+      return 'data'
+    }
+
+    axiosMock.onGet('http://localhost/posts').reply(200, postsEmbedResponse)
+
+    const posts = await Post.nowrap().get()
+
+    expect(posts).toEqual(postsEmbedResponse)
+    expect(posts.data[0]).toEqual(postsEmbedResponse.data[0])
+  })
+
+  test('wrappedBy().get() returns the full response with the "data" wrapper even though the wrap method is set to `test`', async () => {
+    // Set the wrap method to 'data'
+    Post.prototype['wrap'] = () => {
+      return 'test'
+    }
+
+    axiosMock.onGet('http://localhost/posts').reply(200, postsEmbedResponse)
+
+    const posts = await Post.wrappedBy('data').get()
+
+    expect(posts).toEqual(postsEmbedResponse.data)
+    expect(posts[0]).toEqual(postsEmbedResponse.data[0])
+  })
+
   test('save() method makes a POST request when ID of object does not exists', async () => {
     let post
     const _postResponse = {
