@@ -365,6 +365,9 @@ await Model.$find(1)
 They handle and unwrap responses within "data".</alert>
 
 ## `file`
+
+<alert type="success">Available in version >= v1.15.0</alert>
+
 - Returns: `Binary`
 
 Execute the query with $http.responseType as `blob` and returns a binary
@@ -374,10 +377,10 @@ Execute the query with $http.responseType as `blob` and returns a binary
 const data = await Model.file()
 
 // force file download
-const url = window.URL.createObjectURL(new Blob([data]));
-const link = document.createElement('a');
-link.href = url;
-link.setAttribute('download', 'model.xlsx'); //or any other extension
-document.body.appendChild(link);
-link.click();
+const url = window.URL.createObjectURL(new Blob([data]))
+const link = document.createElement('a')
+link.href = url
+link.setAttribute('download', 'model.xlsx') //or any other extension
+document.body.appendChild(link)
+link.click()
 ```
