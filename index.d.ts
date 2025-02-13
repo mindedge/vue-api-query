@@ -736,6 +736,14 @@ export class Model extends StaticModel {
   /**
    * Execute the query and get all results.
    *
+   * @see {@link https://robsontenorio.github.io/vue-api-query/api/query-builder-methods#file|API Reference}
+   * @see {@link https://robsontenorio.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
+   */
+  file(): QueryPromise<BlobPart[]>
+
+  /**
+   * Execute the query and get all results.
+   *
    * @see {@link https://mindedge.github.io/vue-api-query/api/query-builder-methods#get-1|API Reference}
    * @see {@link https://mindedge.github.io/vue-api-query/building-the-query#retrieving-a-list-of-records|Building the Query}
    */
