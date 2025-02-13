@@ -146,6 +146,12 @@ export default class StaticModel {
     return self.get()
   }
 
+  static file() {
+    let self = this.instance()
+
+    self.file()
+  }
+
   static all() {
     let self = this.instance()
 
